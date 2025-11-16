@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
+  <style>
+    .image-container {
+  width: 500px;
+  height: 300px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Заполнить, сохраняя пропорции */
+}
+
+  </style>
 <head>
 <title>ADS | Ads</title>
 </head>
 <body>
 
-<img id="myImage" src="ad1.png" width="300" height="200">
+<img id="img" src="ad1.png" width="300" height="200">
 
 <script>
   const images = ["ad1.png", "ad2.jpg", "ad3.jpg"]; // Массив с путями к изображениям
   let currentIndex = 0;
-  const imageElement = document.getElementById("myImage");
+  const imageElement = document.getElementById("img");
   const intervalTime = 7000; // 40 секунд в миллисекундах
 
   setInterval(function() {
